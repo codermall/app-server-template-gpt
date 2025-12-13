@@ -1,0 +1,30 @@
+{
+  "name": "RAG-demo",
+  "version": "1.0.0",
+  "description": "RAG demo monorepo with frontend and backend",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"pnpm -C app dev\" \"pnpm -C server dev\"",
+    "dev:app": "pnpm -C app dev",
+    "dev:server": "pnpm -C server dev",
+    "build": "pnpm -r build",
+    "typecheck": "pnpm -r typecheck",
+    "lint": "eslint \"app/src/**/*.{ts,tsx}\" \"server/src/**/*.ts\" \"server/bin/**/*.ts\"",
+    "format": "prettier --write \"app/src/**/*.{ts,tsx}\" \"server/src/**/*.ts\" \"server/bin/**/*.ts\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.23.0",
+  "devDependencies": {
+    "@types/node": "^25.0.1",
+    "@typescript-eslint/eslint-plugin": "^8.19.1",
+    "@typescript-eslint/parser": "^8.19.1",
+    "concurrently": "^9.1.2",
+    "eslint": "^9.18.0",
+    "prettier": "^3.4.2",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  }
+}
